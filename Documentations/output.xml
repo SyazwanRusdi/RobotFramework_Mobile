@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.8 on win32)" generated="20220704 14:02:13.253" rpa="false" schemaversion="3">
+<suite id="s1" name="5 Add candidate datadriven excel" source="D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\Features\5_Add_candidate_datadriven_excel.robot">
+<test id="s1-t1" name="Data_excel" line="9">
+<kw name="DD_Positive_add_candidate_success_bdd">
+<arg>Tanaka</arg>
+<arg>Ayumi</arg>
+<arg>Ayumi</arg>
+<kw name="Given I login into OrangeHR" library="add_candidate">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220704 14:02:16.394" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220704 14:02:16.394" endtime="20220704 14:02:25.436"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:26.451" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:25.437" endtime="20220704 14:02:26.451"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="txtUsername"]</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:26.451" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:26.451" endtime="20220704 14:02:26.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:27.592" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:26.588" endtime="20220704 14:02:27.592"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="txtPassword"]</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:27.592" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:27.592" endtime="20220704 14:02:27.708"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:28.719" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:27.709" endtime="20220704 14:02:28.719"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="btnLogin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:28.719" level="INFO">Clicking element 'xpath=//*[@id="btnLogin"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:28.719" endtime="20220704 14:02:41.441"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:42.454" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:41.442" endtime="20220704 14:02:42.454"/>
+</kw>
+<status status="PASS" starttime="20220704 14:02:16.394" endtime="20220704 14:02:42.455"/>
+</kw>
+<kw name="When I navigate to Candidate and click add" library="add_candidate">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="menu_recruitment_viewRecruitmentModule"]/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:42.457" level="INFO">Clicking element 'xpath=//*[@id="menu_recruitment_viewRecruitmentModule"]/b'.</msg>
+<status status="PASS" starttime="20220704 14:02:42.456" endtime="20220704 14:02:47.834"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:48.846" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:47.835" endtime="20220704 14:02:48.847"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="btnAdd"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:48.849" level="INFO">Clicking element 'xpath=//*[@id="btnAdd"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:48.848" endtime="20220704 14:02:51.032"/>
+</kw>
+<status status="PASS" starttime="20220704 14:02:42.455" endtime="20220704 14:02:51.032"/>
+</kw>
+<kw name="And I fill the information for ${exc_fname}, ${exc_lname} and ${exc_lname}" library="add_candidate" sourcename="I fill the information for ${firstname}, ${lastname} and ${email}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_lname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:51.034" level="INFO">Typing text 'Tanaka' into text field 'xpath=//*[@id="addCandidate_lastName"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:51.033" endtime="20220704 14:02:51.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:52.159" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:51.148" endtime="20220704 14:02:52.159"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_fname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:52.161" level="INFO">Typing text 'Ayumi' into text field 'xpath=//*[@id="addCandidate_firstName"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:52.160" endtime="20220704 14:02:52.305"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:53.315" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:52.305" endtime="20220704 14:02:53.316"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:02:53.317" level="INFO">Typing text 'Ayumi' into text field 'xpath=//*[@id="addCandidate_email"]'.</msg>
+<status status="PASS" starttime="20220704 14:02:53.316" endtime="20220704 14:02:53.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:54.440" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:53.434" endtime="20220704 14:02:54.440"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${ac_jobva}</arg>
+<arg>Senior QA Lead</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220704 14:02:54.442" level="INFO">Selecting options from selection list 'xpath=//*[@id="addCandidate_vacancy"]' by label Senior QA Lead.</msg>
+<status status="PASS" starttime="20220704 14:02:54.441" endtime="20220704 14:02:54.604"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:02:55.611" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:02:54.605" endtime="20220704 14:02:55.611"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${ac_uploadresume}</arg>
+<arg>D:\\Github\\Robotframework_ProjectAssignment_Group2\\Documentations\\StepDefinition/resume_small.pdf</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220704 14:02:55.613" level="INFO">Sending D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition\resume_small.pdf to browser.</msg>
+<msg timestamp="20220704 14:02:55.772" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220704 14:02:55.774" level="FAIL">InvalidArgumentException: Message: invalid argument: File not found : D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition/resume_small.pdf
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045D953+2414931]
+	Ordinal0 [0x003EF5E1+1963489]
+	Ordinal0 [0x002DC6B8+837304]
+	Ordinal0 [0x003030EA+995562]
+	Ordinal0 [0x0032449C+1131676]
+	Ordinal0 [0x002FFC74+982132]
+	Ordinal0 [0x003246B4+1132212]
+	Ordinal0 [0x00334812+1198098]
+	Ordinal0 [0x003242B6+1131190]
+	Ordinal0 [0x002FE860+976992]
+	Ordinal0 [0x002FF756+980822]
+	GetHandleVerifier [0x006CCC62+2510274]
+	GetHandleVerifier [0x006BF760+2455744]
+	GetHandleVerifier [0x004EEABA+551962]
+	GetHandleVerifier [0x004ED916+547446]
+	Ordinal0 [0x003F5F3B+1990459]
+	Ordinal0 [0x003FA898+2009240]
+	Ordinal0 [0x003FA985+2009477]
+	Ordinal0 [0x00403AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77587A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77587A6E+238]
+</msg>
+<status status="FAIL" starttime="20220704 14:02:55.612" endtime="20220704 14:02:55.778"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220704 14:02:55.778" endtime="20220704 14:02:55.779"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:02:51.033" endtime="20220704 14:02:55.780"/>
+</kw>
+<kw name="Then I Save the information" library="add_candidate">
+<status status="NOT RUN" starttime="20220704 14:02:55.781" endtime="20220704 14:02:55.781"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:02:16.394" endtime="20220704 14:02:55.781"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:02:16.394" endtime="20220704 14:02:55.782">InvalidArgumentException: Message: invalid argument: File not found : D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition/resume_small.pdf
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045D953+2414931]
+	Ordinal0 [0x003EF5E1+1963489]
+	Ordinal0 [0x002DC6B8+837304]
+	Ordinal0 [0x003030EA+995562]
+	Ordinal0 [0x0032449C+1131676]
+	Ordinal0 [0x002FFC74+982132]
+	Ordinal0 [0x003246B4+1132212]
+	Ordinal0 [0x00334812+1198098]
+	Ordinal0 [0x003242B6+1131190]
+	Ordinal0 [0x002FE860+976992]
+	Ordinal0 [0x002FF756+980822]
+	GetHandleVerifier [0x006CCC62+2510274]
+	GetHandleVerifier [0x006BF760+2455744]
+	GetHandleVerifier [0x004EEABA+551962]
+	GetHandleVerifier [0x004ED916+547446]
+	Ordinal0 [0x003F5F3B+1990459]
+	Ordinal0 [0x003FA898+2009240]
+	Ordinal0 [0x003FA985+2009477]
+	Ordinal0 [0x00403AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77587A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77587A6E+238]
+</status>
+</test>
+<test id="s1-t2" name="Data_excel" line="9">
+<kw name="DD_Positive_add_candidate_success_bdd">
+<arg>John</arg>
+<arg>Wyane</arg>
+<arg>Wyane</arg>
+<kw name="Given I login into OrangeHR" library="add_candidate">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220704 14:02:55.794" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220704 14:02:55.794" endtime="20220704 14:03:09.247"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:10.254" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:09.247" endtime="20220704 14:03:10.254"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="txtUsername"]</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:10.256" level="INFO">Typing text 'Admin' into text field 'xpath=//*[@id="txtUsername"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:10.255" endtime="20220704 14:03:10.387"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:11.394" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:10.387" endtime="20220704 14:03:11.394"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="txtPassword"]</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:11.396" level="INFO">Typing text 'admin123' into text field 'xpath=//*[@id="txtPassword"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:11.395" endtime="20220704 14:03:11.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:12.573" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:11.555" endtime="20220704 14:03:12.573"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="btnLogin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:12.574" level="INFO">Clicking element 'xpath=//*[@id="btnLogin"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:12.574" endtime="20220704 14:03:25.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:26.095" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:25.093" endtime="20220704 14:03:26.095"/>
+</kw>
+<status status="PASS" starttime="20220704 14:02:55.793" endtime="20220704 14:03:26.096"/>
+</kw>
+<kw name="When I navigate to Candidate and click add" library="add_candidate">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="menu_recruitment_viewRecruitmentModule"]/b</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:26.098" level="INFO">Clicking element 'xpath=//*[@id="menu_recruitment_viewRecruitmentModule"]/b'.</msg>
+<status status="PASS" starttime="20220704 14:03:26.098" endtime="20220704 14:03:31.909"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:32.922" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:31.910" endtime="20220704 14:03:32.922"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="btnAdd"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:32.924" level="INFO">Clicking element 'xpath=//*[@id="btnAdd"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:32.923" endtime="20220704 14:03:35.248"/>
+</kw>
+<status status="PASS" starttime="20220704 14:03:26.096" endtime="20220704 14:03:35.248"/>
+</kw>
+<kw name="And I fill the information for ${exc_fname}, ${exc_lname} and ${exc_lname}" library="add_candidate" sourcename="I fill the information for ${firstname}, ${lastname} and ${email}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_lname}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:35.250" level="INFO">Typing text 'John' into text field 'xpath=//*[@id="addCandidate_lastName"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:35.249" endtime="20220704 14:03:35.358"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:36.360" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:35.358" endtime="20220704 14:03:36.360"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_fname}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:36.362" level="INFO">Typing text 'Wyane' into text field 'xpath=//*[@id="addCandidate_firstName"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:36.361" endtime="20220704 14:03:36.515"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:37.517" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:36.515" endtime="20220704 14:03:37.517"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ac_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220704 14:03:37.519" level="INFO">Typing text 'Wyane' into text field 'xpath=//*[@id="addCandidate_email"]'.</msg>
+<status status="PASS" starttime="20220704 14:03:37.518" endtime="20220704 14:03:37.660"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:38.673" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:37.660" endtime="20220704 14:03:38.673"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${ac_jobva}</arg>
+<arg>Senior QA Lead</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220704 14:03:38.675" level="INFO">Selecting options from selection list 'xpath=//*[@id="addCandidate_vacancy"]' by label Senior QA Lead.</msg>
+<status status="PASS" starttime="20220704 14:03:38.674" endtime="20220704 14:03:38.881"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220704 14:03:39.891" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220704 14:03:38.882" endtime="20220704 14:03:39.892"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${ac_uploadresume}</arg>
+<arg>D:\\Github\\Robotframework_ProjectAssignment_Group2\\Documentations\\StepDefinition/resume_small.pdf</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220704 14:03:39.894" level="INFO">Sending D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition\resume_small.pdf to browser.</msg>
+<msg timestamp="20220704 14:03:40.062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220704 14:03:40.063" level="FAIL">InvalidArgumentException: Message: invalid argument: File not found : D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition/resume_small.pdf
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045D953+2414931]
+	Ordinal0 [0x003EF5E1+1963489]
+	Ordinal0 [0x002DC6B8+837304]
+	Ordinal0 [0x003030EA+995562]
+	Ordinal0 [0x0032449C+1131676]
+	Ordinal0 [0x002FFC74+982132]
+	Ordinal0 [0x003246B4+1132212]
+	Ordinal0 [0x00334812+1198098]
+	Ordinal0 [0x003242B6+1131190]
+	Ordinal0 [0x002FE860+976992]
+	Ordinal0 [0x002FF756+980822]
+	GetHandleVerifier [0x006CCC62+2510274]
+	GetHandleVerifier [0x006BF760+2455744]
+	GetHandleVerifier [0x004EEABA+551962]
+	GetHandleVerifier [0x004ED916+547446]
+	Ordinal0 [0x003F5F3B+1990459]
+	Ordinal0 [0x003FA898+2009240]
+	Ordinal0 [0x003FA985+2009477]
+	Ordinal0 [0x00403AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77587A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77587A6E+238]
+</msg>
+<status status="FAIL" starttime="20220704 14:03:39.892" endtime="20220704 14:03:40.063"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220704 14:03:40.064" endtime="20220704 14:03:40.065"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:03:35.248" endtime="20220704 14:03:40.066"/>
+</kw>
+<kw name="Then I Save the information" library="add_candidate">
+<status status="NOT RUN" starttime="20220704 14:03:40.066" endtime="20220704 14:03:40.067"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:02:55.792" endtime="20220704 14:03:40.068"/>
+</kw>
+<status status="FAIL" starttime="20220704 14:02:55.788" endtime="20220704 14:03:40.069">InvalidArgumentException: Message: invalid argument: File not found : D:\Github\Robotframework_ProjectAssignment_Group2\Documentations\StepDefinition/resume_small.pdf
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0045D953+2414931]
+	Ordinal0 [0x003EF5E1+1963489]
+	Ordinal0 [0x002DC6B8+837304]
+	Ordinal0 [0x003030EA+995562]
+	Ordinal0 [0x0032449C+1131676]
+	Ordinal0 [0x002FFC74+982132]
+	Ordinal0 [0x003246B4+1132212]
+	Ordinal0 [0x00334812+1198098]
+	Ordinal0 [0x003242B6+1131190]
+	Ordinal0 [0x002FE860+976992]
+	Ordinal0 [0x002FF756+980822]
+	GetHandleVerifier [0x006CCC62+2510274]
+	GetHandleVerifier [0x006BF760+2455744]
+	GetHandleVerifier [0x004EEABA+551962]
+	GetHandleVerifier [0x004ED916+547446]
+	Ordinal0 [0x003F5F3B+1990459]
+	Ordinal0 [0x003FA898+2009240]
+	Ordinal0 [0x003FA985+2009477]
+	Ordinal0 [0x00403AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77587A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77587A6E+238]
+</status>
+</test>
+<doc>Dont run it on RIDE. Please run it on Python IDE</doc>
+<status status="FAIL" starttime="20220704 14:02:13.253" endtime="20220704 14:03:40.075"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="5 Add candidate datadriven excel">5 Add candidate datadriven excel</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220704 14:02:55.787" level="WARN">Multiple tests with name 'Data_excel' executed in suite '5 Add candidate datadriven excel'.</msg>
+</errors>
+</robot>
